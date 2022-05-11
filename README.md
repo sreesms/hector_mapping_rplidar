@@ -1,15 +1,23 @@
 # hector_mapping_rplidar
 
-mapping of an indoor environment using hector mapping method.
+In this package, mapping of an indoor environment using hector mapping method.
 
-To run the code clone the repository into your ros workspace.
+hector mapping is a node for LIDAR based SLAM with no odometry and low computational resources.
+
+To use hector_mapping, we need a source of **sensor_msgs/LaserScan** data for that we use the **rplidar A2** lidar.
+
+#### To run the code, clone the repository into your ros workspace.
 
 Then run the following code in a new terminal
-`$ catkin_make'
+
+`$ catkin_make`
+
+After successful make, we can run the following code. This lauch file contains the nodes to run both rplidar and mapping.
+
 `$ roslaunch hector_slam_launch rplidar_mapping.launch `
 
-Here we use the rplidar s1 lidar for the mapping process.
+#### Refrences
 
-The hector mapping package can is taken from  https://github.com/tu-darmstadt-ros-pkg/hector_slam
+Hector Mapping:  https://github.com/tu-darmstadt-ros-pkg/hector_slam
 
-rplidar driver package you can also find in https://github.com/Slamtec/rplidar_ros
+rplidar driver: https://github.com/Slamtec/rplidar_ros
